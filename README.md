@@ -1,2 +1,1 @@
-#!/bin/bash
-pwd
+My first readme
