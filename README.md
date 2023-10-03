@@ -1,3 +1,1 @@
-#Project for shell permisions
-shell permisions
-
+0x03. Shell, init files, variables and expansions
