@@ -1,1 +1,1 @@
-How the web works
+Web server
