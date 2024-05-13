@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# ----------------------------------------------------------------------------
+# Script Name: 0-block_all_incoming_traffic_but
+# Description: Script to install and configure UFW to enhance server security.
+# Author: NEAZYIT
+# ----------------------------------------------------------------------------
+
+# Step 1: Update Package Lists
+sudo apt update
+
+# Step 2: Install UFW (Uncomplicated Firewall)
+sudo apt install ufw
+
+# Step 3: Set Default Incoming and Outgoing Traffic Rules
+# Block all incoming traffic by default
+sudo ufw default deny incoming
+
+# Allow all outgoing traffic by default
+sudo ufw default allow outgoing
+
+# Step 4: Allow Specific Incoming Traffic
+# Allow SSH (Port 22)
+sudo ufw allow 22/tcp
+
+# Allow HTTPS (Port 443)
+sudo ufw allow 443/tcp
+
+# Allow HTTP (Port 80)
+sudo ufw allow 80/tcp
+
+# Step 5: Enable UFW
+# Enable the firewall with the configured rules
+sudo ufw enable
+
+# Step 6: Check UFW Status
+# Display the status of UFW to verify the configured rules
+sudo ufw status
